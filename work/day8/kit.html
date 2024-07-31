@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>vit</title>
+</head>
+<body>
+<body>
+<form name="registration" id="satya" onsubmit="return formValidation();">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">user name</label>
+    <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" >age</label>
+    <input type="age" class="form-control" id="exampleInputPassword1" name="uage">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputEmail1" class="form-label">Pincode</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="upincode">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputEmail1" class="form-label">Pan number</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="upan">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputEmail1" class="form-label">phone number</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="uphno">
+  </div>
+  <div class="mb-3 form-check">
+    <label for="exampleInputEmail1" class="form-label">password</label>
+    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="upassi">
+  </div>
+  <button type="submit" class="btn btn-primary" onsubmit=" return formValidation()">Submit</button>
+</form>
+</body>
+<script>
+	function formValidation(){
+		var uname = document.registration.uname;
+		var uage = document.registration.uage;
+		var upincode = document.registration.upincode;
+		var upan = document.registration.upan;
+		var uphno = document.registration.uphno;
+		var upassi = document.registration.upassi;
+		if(user_validation(uname,8,10))
+		{
+			if(age_validation(uage,1))
+			{
+				if(pincode_validation(upincode,6))
+				{
+					if(pan_validation(upan,10))
+					{
+						if(phno_validatin(uphno,10))
+						{
+							if(passi_validation(upassi,12))
+							{
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	function user_validation(uname,mx,my)
+	{
+		var uname_len = uname.value.length;
+		if (uname_len == 0 || uname_len >= my || uname_len < mx)
+		{
+			alert("User name should not be empty / length be between "+my+" to "+mx);
+			uname.focus();
+			return false;
+		}
+		return true;
+	}
+	function age_validation(uage,mx)
+	{ 
+		var letters = /^[0-9]+$/;
+		if(uage.value.match(letters))
+		{
+			return true;
+		}
+		else
+			{
+				alert('Username must have numbers characters only');
+				uage.focus();
+				return false;
+			}
+			var uage_len = uage.value.length;
+		  if (upassi_len == 0 || upassi_len < mx)
+		  {
+			alert("User name should not be empty / length be between "+mx);
+			uage.focus();
+			return false;
+		}
+		return true;
+	
+	}
+	function pincode_validation(upincode,mx)
+	{
+		var upincode_len = upincode.value.length;
+		if (upincode_len == 0 || uname_len < mx)
+		{
+			alert("User name should not be empty / length be between "+mx);
+			upincode.focus();
+			return false;
+		}
+		return true;
+	}
+	function pan_validation(upan,mx)
+	{
+		var upan_len = upan.value.length;
+		if (upan_len == 0 || upan_len < mx)
+		{
+			alert("User name should not be empty / length be between "+mx);
+			upan.focus();
+			return false;
+		}
+		return true;
+		var letters = /^[A-Z0-9]+$/;
+		if(upan.value.match(letters))
+		{
+			return true;
+		}
+		else
+			{
+				alert('Username must have captial alphabet and numbers characters only');
+				return false;
+			}
+	}
+	function phno_validatin(uphno,mx)
+	{
+		var uphno_len = uphno.value.length;
+		if (uphno_len == 0 || uphno_len < mx)
+		{
+			alert("User name should not be empty / length be between "+mx);
+			uphno.focus();
+			return false;
+		}
+		return true;
+		var letters = /^[0-9]+$/;
+		if(uphno.value.match(letters))
+		{
+			return true;
+		}
+		else
+			{
+				alert('Username must have numbers characters only');
+				return false;
+			}
+	}
+	function passi_validation(upassi,mx)
+	{
+		var upassi_len = upassi.value.length;
+		if (upassi_len == 0 || upassi_len < mx)
+		{
+			alert("User name should not be empty / length be between "+mx);
+			upassi.focus();
+			return false;
+		}
+		return true;
+		var letters = /^[A-Z0-9]+$/;
+		if(upassi.value.match(letters))
+		{
+			return true;
+		}
+		else
+			{
+				alert('Username must have captial alphabet and numbers characters only');
+				return false;
+			}
+	}
+</script>
+</html>

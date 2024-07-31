@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<input id="age" type="number" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let pet = (age > 21) ? "remove lemons":"more lemons";
+  document.getElementById("demo").innerHTML =pet+"needed";
+}
+</script>
+
+</body>
+</html>

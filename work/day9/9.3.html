@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+Enter the number<input type="number" name="number" id="cat">
+<button onclick="sat()">check</button>
+<p id="get"></p>
+</body>
+<script>
+	function sat(){
+		var  a=document.getElementById('cat').value;
+		var change = Number(a);
+		if(a>21)
+		{
+			rem = a-21;
+			document.getElementById('get').innerText=rem+'moredata';
+		}
+		else if(a==21){
+			document.getElementById('get').innerText='sufficient';
+		}
+		else if(a<21){
+			rem = 21-a
+			document.getElementById('get').innerText=rem +'less data';
+		}
+		else if(Number.isInteger(change)){
+			document.getElementById('get').innerText='it is integer';
+
+		}
+		else {
+			document.getElementById('get').innerText='it is float';
+		}
+		else{
+			document.getElementById('get').innerText='invalid';
+		}
+	}
+</script>
+</html>
